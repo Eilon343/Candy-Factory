@@ -35,4 +35,8 @@ void SugerSupplier::supplySugar()
     {
         std::cout << supplierName << " is now supplying sugar." << std::endl;
     }
+    else
+    {
+        std::cout << "Unknown sugar supplier is now supplying sugar." << std::endl;
+    }
 }

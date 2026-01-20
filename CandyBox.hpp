@@ -42,19 +42,15 @@ public:
         count--;
         return true;
     }
-    void displayItems() const
-    {
-        if (count == 0)
-        {
-            std::cout << "The box is empty." << std::endl;
-            return;
-        }
-        for (int i = 0; i < count; i++)
-        {
-            if (items[i] != nullptr)
-                std::cout << "Item [" << i << "]: " << items[i] << std::endl;
-        }
+void displayItems() const {
+    if (count == 0) {
+        std::cout << "The box is empty." << std::endl;
+        return;
     }
+    for (int i = 0; i < count; i++) {
+        std::cout << "Item [" << i << "]: " << items[i] << std::endl;
+    }
+}
 };
 
 // #include "CandyBox.hpp"

@@ -21,7 +21,8 @@ const char *ChocolateSupplier::getChocolateName() const
 
 void ChocolateSupplier::setChocolateName(const char *newName)
 {
-if (newName == nullptr) return; 
+    if (newName == nullptr)
+        return;
 
     delete[] this->supplierName;
     this->supplierName = new char[strlen(newName) + 1];
@@ -30,5 +31,12 @@ if (newName == nullptr) return;
 
 void ChocolateSupplier::supplyChocolate()
 {
-    std::cout << supplierName << " is now supplying chocolate." << std::endl;
+    if (supplierName != nullptr)
+    {
+        std::cout << supplierName << " is now supplying chocolate." << std::endl;
+    }
+    else
+    {
+        std::cout << "Unknown Chocolate Supplier is now supplying chocolate." << std::endl;
+    }
 }
